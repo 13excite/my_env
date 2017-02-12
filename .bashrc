@@ -8,7 +8,7 @@ fi
 
 #aliases
 alias jipmi='/usr/java/jdk1.8.0_111/bin/javaws'
-
+alias curl_zb='/usr/sbin/.curl --data "@test.json" https://127.0.0.1:3105'
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
