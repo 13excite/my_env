@@ -42,3 +42,5 @@ case $TERM in
 esac
 
 export PYTHONSTARTUP=~/.pythonrc
+ANSIBLE_CONFIG=~/.ansible/ansible.cfg
+export ANSIBLE_CONFIG
