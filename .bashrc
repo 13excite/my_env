@@ -58,3 +58,4 @@ esac
 export PYTHONSTARTUP=~/.pythonrc
 ANSIBLE_CONFIG=~/.ansible/ansible.cfg
 export ANSIBLE_CONFIG
+export ANSIBLE_FORCE_COLOR=true
