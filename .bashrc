@@ -8,7 +8,6 @@ fi
 
 #aliases
 alias jipmi='/usr/java/jdk1.8.0_111/bin/javaws'
-alias curl_zb='/usr/sbin/.curl --data "@test.json" https://127.0.0.1:3105'
 
 # Docker
 alias de='docker exec'
@@ -23,6 +22,29 @@ alias dstop='docker stop `docker ps -q`'
 alias dc='docker-compose'
 alias dcu='docker-compose up'
 alias dcr='docker-compose run --rm'
+
+# for macos brew
+export HOMEBREW_NO_AUTO_UPDATE=1
+# bash completion enable
+if [ -f /usr/local/share/bash-completion/bash_completion ]; then
+  . /usr/local/share/bash-completion/bash_completion
+fi
+# kuber
+alias k=kubectl
+complete -F __start_kubectl k
+# kube alias
+alias kgp='kubectl get pod'
+alias kgpw='kubectl get pod -o wide'
+alias kgpl='kubectl get po --show-labels'
+alias kgd='kubectl get deployments.apps'
+alias kgs='kubectl get service'
+alias kgr='kubectl get replicasets.apps'
+alias kgsf='kubectl get statefulset.apps'
+alias kgns='kubectl get ns'
+alias kgn='kubectl get no'
+alias kgnw='kubectl get no -o wide'
+alias kgnl='kubectl get po --show-labels'
+alias kga='kubectl get all'
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
@@ -59,3 +81,5 @@ export PYTHONSTARTUP=~/.pythonrc
 ANSIBLE_CONFIG=~/.ansible/ansible.cfg
 export ANSIBLE_CONFIG
 export ANSIBLE_FORCE_COLOR=true
+export KUBECONFIG=~/.kube/cluster_config.yml
+
