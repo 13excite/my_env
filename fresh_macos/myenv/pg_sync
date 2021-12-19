@@ -1,0 +1,2 @@
+rsync --daemon --no-detach -v  on dst
+rsync  --timeout=5 -avz /pgsql/data/archive/000000030000A9C*00000* rsync://dbHostName:80/root/pgsql/data/archive  on src 

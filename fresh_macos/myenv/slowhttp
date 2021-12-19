@@ -1,0 +1,1 @@
+/tmp/slowhttptest -uhttps://shurzgbets.com/ -l3600 -c10000 -r100 -k10 -B -gv0 > /dev/null &

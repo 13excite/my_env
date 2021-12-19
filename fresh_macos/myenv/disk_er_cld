@@ -1,0 +1,1 @@
+# переподцепить диск# посмотерть magic numll /sys/block/sdb/devicelrwxrwxrwx 1 root root 0 Jun 14 12:56 /sys/block/sdb/device -> ../../../2:0:0:0/# отцепить и подцепить обратноecho "scsi remove-single-device 2 0 0 0" > /proc/scsi/scsiecho "scsi add-single-device 2 0 0 0" > /proc/scsi/scsi# отресканить всю шинуecho '- - -' > /sys/class/scsi_host/host1/scan

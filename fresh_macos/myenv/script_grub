@@ -1,0 +1,1 @@
+( echo "device (hd1) /dev/sdy"; echo "root (hd1,0)"; echo "setup (hd1)"; echo quit )|grub

@@ -1,0 +1,32 @@
+logger = logging.getLogger('mortgage')
+
+    logging.basicConfig(level=logging.DEBUG)
+
+
+     logging.basicConfig(level=logging.DEBUG,
+                        format='%(asctime)s %(levelname)s %(message)s',
+                        datefmt='%a %b %d %Y %I:%M:%S%p')
+
+
+        logger.exception("Exception occured")
+    logging.debug('Leaving mortgage calculator')
+
+
+separate_file
+if __name__ == '__main__':
+    log_filename = '../../Sandbox/separate_levels.log'
+    file_handler = logging.FileHandler(log_filename)
+
+    fmt = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+    file_handler.setFormatter(fmt)
+
+    root_logger = logging.getLogger()
+    root_logger.addHandler(file_handler)
+
+    stdout_handler = logging.StreamHandler(sys.stdout)
+    stdout_handler.setFormatter(fmt)
+    stdout_handler.setLevel(logging.WARNING)
+    root_logger.addHandler(stdout_handler)
+
+    root_logger.setLevel(logging.DEBUG)
+

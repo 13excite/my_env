@@ -1,0 +1,9 @@
+ip a a ip/32 dev dummy1:10
+
+
+ip -6 a a ip6_add dev dummy1:10
+
+
+
+ip a d ip/32 dev dummy1:10
+ip -6 d a ip6_add dev dummy1:10

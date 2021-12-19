@@ -1,0 +1,1 @@
+ethtool —set-priv-flags <interface name> disable-fw-lldp on

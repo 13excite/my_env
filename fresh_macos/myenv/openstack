@@ -1,0 +1,3 @@
+-A INPUT -i br-ex-cdn -j ACCEPT
+-A FORWARD -i br-ex-cdn -j ACCEPT
+-A FORWARD -i eth3 -j ACCEPT

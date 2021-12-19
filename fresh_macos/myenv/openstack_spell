@@ -1,0 +1,15 @@
+ openstack port show b4360a08-35dd-4b18-b9f4-1f6bda8cb620
+ openstack port list —device-id d07342d6-43a6-4d40-859f-052286d228bf
+ openstack port list
+ openstack port show b4360a08-35dd-4b18-b9f4-1f6bda8cb620
+ openstack port set —allowed-address ip-address=87.240.190.1 b4360a08-35dd-4b18-b9f4-1f6bda8cb620
+ #openstack port set —-allowed-address ip-address=87.240.190.1 b4360a08-35dd-4b18-b9f4-1f6bda8cb620
+ openstack port list —-device-id d07342d6-43a6-4d40-859f-052286d228bf
+ openstack port set —-allowed-address ip-address=87.240.190.1 b4360a08-35dd-4b18-b9f4-1f6bda8cb620
+ openstack port set —-allowed-address ip-address="87.240.190.1" b4360a08-35dd-4b18-b9f4-1f6bda8cb620
+ openstack port set --allowed-address ip-address= b4360a08-35dd-4b18-b9f4-1f6bda8cb620
+ openstack port set --allowed-address ip-address=87.240.190.1 b4360a08-35dd-4b18-b9f4-1f6bda8cb620
+ openstack port show b4360a08-35dd-4b18-b9f4-1f6bda8cb620
+ openstack port set --allowed-address ip-address=87.240.190.0 b4360a08-35dd-4b18-b9f4-1f6bda8cb620
+ openstack flavor show c9006dd1-46f8-4623-a13d-9a5417289797
+ openstack flavor list

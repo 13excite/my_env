@@ -1,0 +1,5 @@
+install -o v.dulenov -g v.dulenov -m 0700 -d /home/v.dulenov
+iostat -x 1 `ls /sys/block | grep sd`
+curl --upload-file robot.py https://t.bk
+puppet cert clean photo-st385.i
+ps -eo pid,cmd,lstart | grep intapi

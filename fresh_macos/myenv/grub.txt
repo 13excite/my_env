@@ -1,0 +1,30 @@
+grub
+Probing devices to guess BIOS drives. This may take a long time.
+devic
+
+    GNU GRUB  version 0.97  (640K lower / 3072K upper memory)
+
+ [ Minimal BASH-like line editing is supported.  For the first word, TAB
+   lists possible command completions.  Anywhere else TAB lists the possible
+   completions of a device/filename.]
+grub> e (hd1) /dev/sdr
+device (hd1) /dev/sdr
+grub> root (hd1,0)
+root (hd1,0)
+ Filesystem type is ext2fs, partition type 0xfd
+grub> setup (hd1)
+setup (hd1)
+ Checking if "/boot/grub/stage1" exists... yes
+ Checking if "/boot/grub/stage2" exists... yes
+ Checking if "/boot/grub/e2fs_stage1_5" exists... yes
+ Running "embed /boot/grub/e2fs_stage1_5 (hd1)"...  27 sectors are embedded.
+succeeded
+q
+ Running "install /boot/grub/stage1 (hd1) (hd1)1+27 p (hd1,0)/boot/grub/stage2 /boot/grub/grub.conf"... succeeded
+Done.
+grub> q
+
+Error 27r: Unrecognized command
+grub> quit
+quit
+

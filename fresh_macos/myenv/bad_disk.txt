@@ -1,0 +1,46 @@
+cd /sys/block/
+ls -l sd*/device
+ls -l sd*/device | grep /0:0
+ls -l sd*/device | grep /0:0 | wc -l
+df
+cd /sys/block/
+yum install partprobe
+yum search partprobe
+yum install parted
+ls -l sd*/device
+for i in sd{a..x}; do echo $i; partprobe /dev/${i}; done
+df
+for i in sd{a..x}; do df | grep $i >/dev/null || echo $i; done
+partprobe /dev/sdh
+mount -a
+df
+for i in sd{a..x}; do df | grep $i >/dev/null || echo $i; done
+for i in sd{a..x}; do df | grep $i >/dev/null || partprobe /dev/$i; done
+mount -a
+df
+df | grep sdh
+df | grep 369
+mount -a
+df
+df | grep sdh
+df | grep 369
+dmesg 
+mount
+mount | grep sdh
+dmesg 
+mount -a
+less /proc/mdstat 
+mdadm -E /dev/sdh1
+mdadm -D /dev/md11
+mdadm -D /dev/md121
+mdadm -S /dev/md121
+mount -a
+df
+less /proc/mdstat 
+mdadm -S /dev/md122
+mdadm -S /dev/md123
+mdadm -S /dev/md124
+mdadm -S /dev/md125
+mdadm -S /dev/md126
+mdadm -S /dev/md127
+

@@ -1,0 +1,1 @@
+iptables -I INPUT 1 -p udp —dport 2400:2440 -j DROP ; sleep 10; iptables -D INPUT 1

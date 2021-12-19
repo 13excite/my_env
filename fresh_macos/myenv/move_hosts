@@ -1,0 +1,7 @@
+  850  while read L;do D=$(echo $L|awk {'print $1'}); T=$(echo $L|awk {'print $4'}); for P in {/etc/hostname,/etc/salt/minion_id,/etc/exim4/update-exim4.conf.conf};do echo sed -i 's/'$D'/front'$T'/' $P;done;done < ~/mode_hst_front 
+  851  while read L;do D=$(echo $L|awk {'print $1'}); T=$(echo $L|awk {'print $4'}); for P in {/etc/hostname,/etc/salt/minion_id,/etc/exim4/update-exim4.conf.conf};do echo sed -i 's/'$D'/front'$T'/' $P;done;done < ~/mode_hst_front  >> gen_sed
+  863  while read L;do D=$(echo $L|awk {'print $1'}); T=$(echo $L|awk {'print $4'}); echo mv $D $T;done < ~/mode_hst_front  
+  864  while read L;do D=$(echo $L|awk {'print $1'}); T=$(echo $L|awk {'print $4'}); echo mv $D front$T;done < ~/mode_hst_front  
+  865  while read L;do D=$(echo $L|awk {'print $1'}); T=$(echo $L|awk {'print $4'}); echo mv stack/hosts/$D stack/hosts/front$T;done < ~/mode_hst_front  
+  866  while read L;do D=$(echo $L|awk {'print $1'}); T=$(echo $L|awk {'print $4'}); echo mv stack/hosts/$D.yml stack/hosts/front$T.yml;done < ~/mode_hst_front  
+  867  while read L;do D=$(echo $L|awk {'print $1'}); T=$(echo $L|awk {'print $4'}); echo salt-key -y -a front$T;done < ~/mode_hst_front

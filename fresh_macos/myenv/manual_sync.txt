@@ -1,0 +1,40 @@
+mdadm -D /dev/md4
+smartctl -a /dev/sdm2
+smartctl -a /dev/sdm
+mdadm -D /dev/m
+smartctl -a /dev/sdj
+mdadm /dev/md4 -r /dev/sdm
+mdadm /dev/md4 -r /dev/sdm2
+mdadm -C /dev/md204 -l 1 -n 2 -e 0.90 /dev/sdm2 missing
+mkfs.xfs /dev/md204
+mkfs.xfs -f /dev/md204
+/etc/init.d/mescalito stop
+umount /dev/md4
+/etc/init.d/mescalito start
+ls -l /var/mail/vdomains/
+ls -l /var/mail/vdomains/mail.ru/
+ls /mnt/
+mkdir /mnt/md4
+mkdir /mnt/204
+mount -o ro,norecovery /dev/md4 /mnt/md4/
+mount /dev/md204 /mnt/204/
+cd /mnt/md4/
+ll
+cp -R -P -p ./ /mnt/md204
+df -h
+umount /dev/md4
+cd ~
+umount /dev/md4
+umount /dev/md204
+mdadm -S /dev/md4
+mdadm -S /dev/md204
+mdadm -A /dev/md4 /dev/sdm2
+mount -a
+df
+/etc/init.d/mescalito restart
+mdadm -D /dev/md4
+vim /etc/mdadm.conf
+mdadm --zero-superblock /dev/sdj2
+alias
+replace_disk
+

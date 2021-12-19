@@ -1,0 +1,5 @@
+rsync -ravi nginx-lua-0.02-1.el7.centos.noarch.rpm vasya@pkg.corp.ru::test-c7-noarch
+
+
+
+nc pkg.corp.ru 12222 <<<"test-c7-noarch"

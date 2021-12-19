@@ -1,0 +1,1 @@
+innobackupex --defaults-file=/etc/my.cnf --password=123456   --compress --compress-threads=4 --stream=xbstream --parallel=2 ./ |~/test_bckp -c ~/config.yaml -f testbackup.xbstream

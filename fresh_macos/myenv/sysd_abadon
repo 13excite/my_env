@@ -1,0 +1,6 @@
+journalctl -u tarantool@*
+
+
+
+
+systemctl | grep -E "session-c[0-9]+\.scope.*abandoned.*of user (root|nobody)" | sed "s/\.scope.*/.scope/"  | xargs systemctl stop

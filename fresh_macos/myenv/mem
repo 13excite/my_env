@@ -1,0 +1,1 @@
+hostname;/usr/sbin/dmidecode -t memory | grep -E "^\W(Size:|Locator:|Speed:)" | sed -e "/Size:/{N;N;s/^\W\(Size:.*\)\n\W\(Locator:.*\)\n\W\(Speed:.*\)/\2 \1 \3/}"  -e "s/Size: \|Locator: \|Speed: //g" -e "s/No Module Installed/free/g"; awk '/^MemTotal/ {print $2,$3}' /proc/meminfo

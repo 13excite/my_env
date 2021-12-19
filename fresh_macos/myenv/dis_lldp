@@ -1,0 +1,12 @@
+но если вдруг встретите такое то
+
+cat base/files/disable_internal_lldp.sh
+#!/usr/bin/env bash
+
+set -euo pipefail
+shopt -s nullglob
+
+for i in /sys/kernel/debug/i40e/*/command
+do
+echo 'lldp stop' > ${i}
+done

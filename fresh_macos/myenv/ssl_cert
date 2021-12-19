@@ -1,0 +1,2 @@
+  acme.sh --issue  -d 'ui.test.com' -d '*.ui.test.com'  --dns --yes-I-know-dns-manual-mode-enough-go-ahead-please
+  acme.sh --renew  -d 'ui.test.com' -d '*.ui.test.com'  --dns --yes-I-know-dns-manual-mode-enough-go-ahead-please

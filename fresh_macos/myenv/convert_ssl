@@ -1,0 +1,4 @@
+openssl pkcs12 -export -aes256 -in vdulenov.crt -inkey key.pem -certfile wife.crt -out vdulenov.p12
+
+
+openssl req -batch -nodes -new -newkey rsa:2048 -sha512 -out req.pem -keyout key.pem -subj '/C=RU/ST=MSK/L=Moscow/O=Companyname/OU=developers/CN=vdulenov'

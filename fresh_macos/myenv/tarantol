@@ -1,0 +1,2 @@
+# if replication status = stop; ALARM use  
+local x = box.cfg.replication; box.cfg{ replication = {}; }; box.cfg{ replication = x };

@@ -1,0 +1,1 @@
+htpasswd -bBn cloud_docker 6zgbdBiFjFwIiW

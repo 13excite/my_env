@@ -1,0 +1,6 @@
+journalctl -f
+journalctl -f -u zeppelin
+systemctl cat zeppelin
+...
+   systemctl restart systemd-journald
+   restart systemd-journald.socket

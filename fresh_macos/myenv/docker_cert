@@ -1,0 +1,4 @@
+chain.pem → cacert.pem
+cert.pem → servertcrt.pem
+privkey.pem → serverkey.pem
+

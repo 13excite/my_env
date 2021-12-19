@@ -1,0 +1,19 @@
+[foogroup]
+myshinehost @bargroup
+
+---
+foogroup.yml:
+xyz: true
+---
+bargroup.yml
+xyz: false
+ 
+хочу, чтобы группа к хосту прилепленная была более приоритетной
+ 
+олфовитный порядок
+ 
+[foogroup]
+@bargroup
+myshinehost @bargroup
+ 
+Вот так будет приоритет

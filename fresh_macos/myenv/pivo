@@ -1,0 +1,5 @@
+ssh -Y point
+ssh -Y v
+ssh -Y pivo1
+firefox --no-remote 
+https://servak.ipmi

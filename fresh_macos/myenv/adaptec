@@ -1,0 +1,3 @@
+rmmod aacraid
+modprobe aacraid
+sleep 1;

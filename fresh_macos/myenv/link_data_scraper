@@ -1,0 +1,1 @@
+while read line;do SRV_ID=$( echo $line|awk {'print $1'} ); GR_NAME=$( echo $line|awk {'print $2'} ); echo -n $GR_NAME; echo -n  " $SRV_ID "; ssh front$SRV_ID "bash lldp_get_info.sh" < /dev/null;  done < out_front_with_group >> front_link_data

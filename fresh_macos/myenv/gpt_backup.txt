@@ -1,0 +1,8 @@
+(
+echo v
+echo r
+echo c
+echo Y
+echo w
+echo Y
+) | gdisk /dev/sdo

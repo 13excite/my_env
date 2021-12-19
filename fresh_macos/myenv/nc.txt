@@ -1,0 +1,2 @@
+nc -d -l 34567 | tar xv
+tar -c ./ |nc front-1.z 34567

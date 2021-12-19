@@ -1,0 +1,6 @@
+  mailq |grep -B 1 "ried to reach is over quota"|grep notify.com|awk {'print $1'} >> overcvoted_id
+  maiq |less
+  maiq |grep -A 1 C0351200EEE5E
+  mailq |grep -A 1 C0351200EEE5E
+  for N in `cat overcvoted_id`;do find /var/spool/postfix/ -type f -name $N;done
+  for N in `cat overcvoted_id`;do find /var/spool/postfix/ -type f -name $N -delete;done

@@ -1,0 +1,2 @@
+engine_logrotate_rotate: >-
+  {%- if hostvars[inventory_hostname].ansible_devices.sda.size <= '128 GB' -%}3{%- else -%}4{%- endif -%}

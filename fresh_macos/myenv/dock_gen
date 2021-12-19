@@ -1,0 +1,1 @@
+htpasswd -bBn docker 123456

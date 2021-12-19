@@ -1,0 +1,43 @@
+for r in `seq 0 31`; do echo -n "mdadm -A /dev/md$r"; for i in `ls /dev/sd*[1-4]`; do if [ -n "$(mdadm -E --brief $i| grep md$r >/dev/null) ]; then echo n " "$i; fi; done; echo
+ ""; done
+for r in `seq 0 31`; do echo -n "mdadm -A /dev/md$r"; for i in `ls /dev/sd*[1-4]`; do if [ -n "$(mdadm -E --brief $i| grep md$r"  ")" ]; then echo n " "$i; fi; done; echo ""; d
+one
+for r in `seq 0 31`; do echo -n "mdadm -A /dev/md$r"; for i in `ls /dev/sd*[1-4]`; do if [ -n "$(mdadm -E --brief $i| grep md$r" 2>/dev/null  ")" ]; then echo n " "$i; fi; done
+; echo ""; done
+for r in `seq 0 31`; do echo -n "mdadm -A /dev/md$r"; for i in `ls /dev/sd*[1-4]`; do if [ -n "$(mdadm -E --brief $i 2>/dev/null| grep md$r" ")" ]; then echo n " "$i; fi; done;
+ echo ""; done
+for r in `seq 0 31`; do echo -n "mdadm -A /dev/md$r"; for i in `ls /dev/sd*[1-4]`; do if [ -n "$(mdadm -E --brief $i 2>/dev/null| grep md$r" ")" ]; then echo -n " "$i; fi; done
+; echo ""; done
+vi /root/disks
+mdadm -A /dev/md0 /dev/sdi1 /dev/sdm1
+mdadm -A /dev/md1 /dev/sdi2 /dev/sdm2
+less /root/disks
+mdadm -A /dev/md4 /dev/sdj1 --run
+mdadm /dev/md4 -a /dev/sdl1
+df
+less /usr/site/bin/raidmon
+/sbin/mdadm --detail --scan
+mdadm -D /dev/md4
+less /proc/mdstat
+vi /etc/mdadm.conf
+/sbin/mdadm --detail --scan
+tail -4 /etc/mdadm.conf
+/sbin/mdadm --detail --scan > /etc/mdadm.conf
+vi /etc/mdadm.conf
+df
+ls -l /var/photo/
+less /etc/fstab
+mdadm -D /dev/md111
+grep f5b31c8a:74a2b9e2:92b4a2eb:33b45e61 /proc/mdstat
+grep f5b31c8a:74a2b9e2:92b4a2eb:33b45e61 /etc/mdadm.conf
+mount /dev/md0 /mnt
+ls -l /mnt/
+ifconfig
+df
+yum remove mesc
+cd /var/photo/
+ls
+ls -la
+df
+umount /mnt
+

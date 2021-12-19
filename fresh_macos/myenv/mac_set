@@ -1,0 +1,7 @@
+ip link set dev $VFDEV address $MAC'
+
+
+another
+ip link set dev $PFDEV vf $VFID mac $MAC
+
+ip link set dev eth5 vf 4 spoofchk off
