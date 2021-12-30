@@ -1,1 +1,0 @@
-install -d $HOME/out; for DB in $( systemctl | grep tarantool@tagger | awk '{print $1}' | sed 's|tarantool@||; s|\.service||' ); do echo "echo \"json.encode(require('bg_jobs.scenes_stats').by_images())\" | tarantoolctl enter $DB ";done
