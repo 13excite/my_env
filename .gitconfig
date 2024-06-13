@@ -1,0 +1,25 @@
+[user]
+	name = Vladimir
+	email = vladimir@vladimir.example
+	signingkey = ssh-rsa AAAAB3N123456893c= vladimir@vladimir
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[commit]
+            gpgsign = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[gpg]
+        format = ssh
+
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/allowed_signers
+[core]
+	editor = vim
+	hooksPath = /home/vladimir/.commitlint/hooks
