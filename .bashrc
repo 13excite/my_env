@@ -90,6 +90,10 @@ alias azsa-keys='az storage account keys list'
 alias azsacntr='az storage container list'
 
 
+alias amonmtal='az monitor metrics alert list'
+alias amonacl='az monitor activity-log alert list'
+alias amonsql='az monitor scheduled-query list'
+
 # for macos brew
 export HOMEBREW_NO_AUTO_UPDATE=1
 # bash completion enable
